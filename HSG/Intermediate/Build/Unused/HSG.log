@@ -1,0 +1,15 @@
+﻿  Parsing headers for HSGEditor
+    Running UnrealHeaderTool "C:\Users\Versus\Desktop\Extensions\HSG\HSG.uproject" "C:\Users\Versus\Desktop\Extensions\HSG\Intermediate\Build\Win64\HSGEditor\Development\HSGEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for HSGEditor in 10,5161769 seconds
+  Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 6 actions with 4 processes...
+    [1/6] HSG.init.gen.cpp
+    [2/6] Planet.gen.cpp
+    [3/6] Planet.cpp
+    [4/6] UE4Editor-HSG-0034.lib
+       Creando biblioteca C:\Users\Versus\Desktop\Extensions\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\UE4Editor-HSG-0034.lib y objeto C:\Users\Versus\Desktop\Extensions\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\UE4Editor-HSG-0034.exp
+    [5/6] UE4Editor-HSG-0034.dll
+       Creando biblioteca C:\Users\Versus\Desktop\Extensions\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\UE4Editor-HSG-0034.suppressed.lib y objeto C:\Users\Versus\Desktop\Extensions\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\UE4Editor-HSG-0034.suppressed.exp
+    [6/6] HSGEditor.target
+  Total time in Parallel executor: 15,79 seconds
+  Total execution time: 28,83 seconds
