@@ -1,2 +1,2 @@
-C:\Users\Versus\Desktop\Extensions\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\Definitions.HSG.h
-c:\users\versus\desktop\extensions\hsg\source\hsg\HSG.h
+C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\Definitions.HSG.h
+C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Source\HSG\HSG.h

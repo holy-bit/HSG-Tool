@@ -1,9 +1,9 @@
-C:\Users\Versus\Desktop\Extensions\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\Definitions.HSG.h
-C:\Program Files (x86)\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files (x86)\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\Versus\Desktop\Extensions\HSG\Source\HSG/HSGGameModeBase.h
-C:\Program Files (x86)\UE_4.23\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-C:\Program Files (x86)\UE_4.23\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-C:\Program Files (x86)\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-C:\Program Files (x86)\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-c:\users\versus\desktop\extensions\hsg\intermediate\build\win64\ue4editor\inc\hsg\HSGGameModeBase.generated.h
+C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\Definitions.HSG.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Source\HSG/HSGGameModeBase.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Inc\HSG\HSGGameModeBase.generated.h

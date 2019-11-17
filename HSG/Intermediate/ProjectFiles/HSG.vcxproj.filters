@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\HSG.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{64913467-C445-4102-8BD5-54423E588C0A}</UniqueIdentifier>
+      <UniqueIdentifier>{6D6A46F5-111F-45C9-B862-2E5644311A01}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\HSG.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{D047E2C5-8E27-4E9B-9223-150D48F3BA9A}</UniqueIdentifier>
+      <UniqueIdentifier>{DB8F4533-0981-484A-8682-ED6C2B9AE934}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,55 +24,55 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\Android">
-      <UniqueIdentifier>{68F582A8-13A8-4DE9-B720-24D2025E83AC}</UniqueIdentifier>
+      <UniqueIdentifier>{FB6A9919-0C66-48C5-8DDF-AF6F4A3C4E3E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Android\AndroidEngine.ini">
       <Filter>Config\Android</Filter>
     </None>
     <Filter Include="Config\IOS">
-      <UniqueIdentifier>{39936A30-B9DC-4322-A5BF-F9D05ACD39B6}</UniqueIdentifier>
+      <UniqueIdentifier>{49188E0C-B334-4028-BF0D-32336AB9E9E7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\IOS\IOSEngine.ini">
       <Filter>Config\IOS</Filter>
     </None>
     <Filter Include="Config\Linux">
-      <UniqueIdentifier>{F4057B37-7DB0-4560-852A-63EB8AB020C7}</UniqueIdentifier>
+      <UniqueIdentifier>{2DB25D0D-44CE-4AFA-997E-746D5E1CD3EB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Linux\LinuxEngine.ini">
       <Filter>Config\Linux</Filter>
     </None>
     <Filter Include="Config\Mac">
-      <UniqueIdentifier>{6E64CAD9-CFFA-4A11-A1BC-E6C45D0C958A}</UniqueIdentifier>
+      <UniqueIdentifier>{E13A76F9-DA79-4884-9D50-E53D78B728B5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Mac\MacEngine.ini">
       <Filter>Config\Mac</Filter>
     </None>
     <Filter Include="Config\PS4">
-      <UniqueIdentifier>{3FB19A19-5A86-4945-BFFD-40669F24BFBA}</UniqueIdentifier>
+      <UniqueIdentifier>{4BFECD1D-FD47-4754-9A39-0F045A7B7C39}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\PS4\PS4Engine.ini">
       <Filter>Config\PS4</Filter>
     </None>
     <Filter Include="Config\Switch">
-      <UniqueIdentifier>{CA75FAE9-D0CA-475B-8693-8BDADAEFB773}</UniqueIdentifier>
+      <UniqueIdentifier>{6CB10521-0DE2-441C-8AEE-A7409D4C23E5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Switch\SwitchEngine.ini">
       <Filter>Config\Switch</Filter>
     </None>
     <Filter Include="Config\Windows">
-      <UniqueIdentifier>{B133C8F8-8DCC-4EEC-BF98-AF702EF74F60}</UniqueIdentifier>
+      <UniqueIdentifier>{9702D61A-5E87-4B8C-8E4B-C3B683C5229F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\Windows\WindowsEngine.ini">
       <Filter>Config\Windows</Filter>
     </None>
     <Filter Include="Config\XboxOne">
-      <UniqueIdentifier>{80DB38F0-03D3-42F8-A418-208B2B7D83BF}</UniqueIdentifier>
+      <UniqueIdentifier>{469F68DB-ED9D-4B4E-9D66-B0D9E17FB5A1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\XboxOne\XboxOneEngine.ini">
       <Filter>Config\XboxOne</Filter>
     </None>
     <Filter Include="Source\HSG">
-      <UniqueIdentifier>{61BAA4EC-B9AD-41C3-BEFF-425BFF3748C0}</UniqueIdentifier>
+      <UniqueIdentifier>{5CBB828F-24A6-4999-B8F3-33284105C935}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\HSG\HSG.Build.cs">
       <Filter>Source\HSG</Filter>

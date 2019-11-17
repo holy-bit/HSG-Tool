@@ -2,7 +2,7 @@
 
 
 #include "Planet.h"
-
+DEFINE_LOG_CATEGORY(LogMyGame);
 // Sets default values
 APlanet::APlanet()
 {
@@ -31,6 +31,91 @@ void APlanet::BeginPlay()
  	triangles.Add(V3);
  }
 
+ FVector APlanet::getMiddle(FVector& v1, FVector& v2)
+ {
+	 //The golden ratio
+	 float t = (1 + sqrt(5)) / 2;
+
+	 FVector temporaryVector;
+
+	 //Calculate the middle
+	 temporaryVector = (v2 - v1) * 0.5 + v1;
+
+	 //Offset poin
+	 temporaryVector.Normalize();
+	 temporaryVector *= sqrt(t * t + 1) * 50;
+
+	 return temporaryVector;
+ }
+
+ void APlanet::subdivideIcosahedron()
+ {
+	 float t = (1 + sqrt(5)) / 2;
+	 TArray<FVector> newVertices;
+	 TArray<int32> newindex;
+
+	 FVector newVector1;
+	 FVector newVector2;
+	 FVector newVector3;
+	 int32 x = 0;
+	 UE_LOG(LogMyGame, Warning, TEXT("MyCharacter's Health is %d"), mesh.index.Num());
+ 	 for (int i = 0; i < mesh.index.Num()-2; i += 3)
+ 	 {
+ 		 //Find the middle points
+ 		 newVector1 = getMiddle(mesh.vertices[mesh.index[i]], mesh.vertices[mesh.index[i+1]]);
+ 		 newVector2 = getMiddle(mesh.vertices[mesh.index[i+1]], mesh.vertices[mesh.index[i+2]]);
+ 		 newVector3 = getMiddle(mesh.vertices[mesh.index[i+2]], mesh.vertices[mesh.index[i]]);
+ 
+ 		 //Add the new faces
+ 		 newVertices.Add(newVector3);
+ 		 newVertices.Add(mesh.vertices[mesh.index[i]]);
+ 		 newVertices.Add(newVector1);
+ 
+ 		 /////
+ 		 newindex.Add(x);
+ 		 x++;
+ 		 newindex.Add(x);
+ 		 x++;
+ 		 newindex.Add(x);
+ 		 x++;
+ 
+ 		 newVertices.Add(newVector1);
+ 		 newVertices.Add(mesh.vertices[mesh.index[i+1]]);
+ 		 newVertices.Add(newVector2);
+ 
+ 		 newindex.Add(x);
+ 		 x++;
+ 		 newindex.Add(x);
+ 		 x++;
+ 		 newindex.Add(x);
+ 		 x++;
+ 
+ 		 newVertices.Add(newVector2);
+ 		 newVertices.Add(mesh.vertices[mesh.index[i+2]]);
+ 		 newVertices.Add(newVector3);
+ 
+ 		 newindex.Add(x);
+ 		 x++;
+ 		 newindex.Add(x);
+ 		 x++;
+ 		 newindex.Add(x);
+ 		 x++;
+ 
+ 		 newVertices.Add(newVector1);
+ 		 newVertices.Add(newVector2);
+ 		 newVertices.Add(newVector3);
+ 
+ 		 newindex.Add(x);
+ 		 x++;
+ 		 newindex.Add(x);
+ 		 x++;
+ 		 newindex.Add(x);
+ 		 x++;
+ 	 }
+	 //Replace old points with new
+	 mesh.vertices = newVertices;
+	 mesh.index = newindex;
+ }
 
 void APlanet::OnConstruction(const FTransform& Transform)
 {
@@ -86,21 +171,31 @@ void APlanet::OnConstruction(const FTransform& Transform)
 // 	const float X = .525731112119133606f;
 // 	const float Z = .850650808352039932f;
 // 	const float N = 0.f;
+	mesh = FMesh(icosahedron::vertices);
+//  	vertices.Add(icosahedron::vertices[0]);
+//  	vertices.Add(icosahedron::vertices[1]);
+//  	vertices.Add(icosahedron::vertices[2]);
+//  	vertices.Add(icosahedron::vertices[3]);
+//  	vertices.Add(FVector(icosahedron::vertices[4]));
+//  	vertices.Add(FVector(icosahedron::vertices[5]));
+//  	vertices.Add(FVector(icosahedron::vertices[6]));
+//  	vertices.Add(FVector(icosahedron::vertices[7]));
+//  	vertices.Add(FVector(icosahedron::vertices[8]));
+//  	vertices.Add(FVector(icosahedron::vertices[9]));
+//  	vertices.Add(FVector(icosahedron::vertices[10]));
+//  	vertices.Add(FVector(icosahedron::vertices[11]));
+
+	for (int i =0;i<20;i++)
+	{
+		mesh.AddTriangle(icosahedron::triangles[i][0], icosahedron::triangles[i][1], icosahedron::triangles[i][2]);
+	}
  
- 	vertices.Add(icosahedron::vertices[0]);
- 	vertices.Add(icosahedron::vertices[1]);
- 	vertices.Add(icosahedron::vertices[2]);
- 	vertices.Add(icosahedron::vertices[3]);
- 	vertices.Add(FVector(icosahedron::vertices[4]));
- 	vertices.Add(FVector(icosahedron::vertices[5]));
- 	vertices.Add(FVector(icosahedron::vertices[6]));
- 	vertices.Add(FVector(icosahedron::vertices[7]));
- 	vertices.Add(FVector(icosahedron::vertices[8]));
- 	vertices.Add(FVector(icosahedron::vertices[9]));
- 	vertices.Add(FVector(icosahedron::vertices[10]));
- 	vertices.Add(FVector(icosahedron::vertices[11]));
- 
- 	AddTriangle(icosahedron::triangles[0].vertices.X, icosahedron::triangles[0].vertices.Y, icosahedron::triangles[0].vertices.Z);
+
+	subdivideIcosahedron();
+	subdivideIcosahedron();
+	subdivideIcosahedron();
+	subdivideIcosahedron();
+ 	/*AddTriangle(icosahedron::triangles[0].vertices.X, icosahedron::triangles[0].vertices.Y, icosahedron::triangles[0].vertices.Z);
 	AddTriangle(icosahedron::triangles[1].vertices.X, icosahedron::triangles[1].vertices.Y, icosahedron::triangles[1].vertices.Z);
 	AddTriangle(icosahedron::triangles[2].vertices.X, icosahedron::triangles[2].vertices.Y, icosahedron::triangles[2].vertices.Z);
 	AddTriangle(icosahedron::triangles[3].vertices.X, icosahedron::triangles[3].vertices.Y, icosahedron::triangles[3].vertices.Z);
@@ -120,25 +215,38 @@ void APlanet::OnConstruction(const FTransform& Transform)
 	AddTriangle(icosahedron::triangles[17].vertices.X, icosahedron::triangles[17].vertices.Y, icosahedron::triangles[17].vertices.Z);
 	AddTriangle(icosahedron::triangles[18].vertices.X, icosahedron::triangles[18].vertices.Y, icosahedron::triangles[18].vertices.Z);
 	AddTriangle(icosahedron::triangles[19].vertices.X, icosahedron::triangles[19].vertices.Y, icosahedron::triangles[19].vertices.Z);
+*/
 
- 	
- 
- 	vertexColors.Add(FLinearColor(0.f, 0.f, 1.f));
- 	vertexColors.Add(FLinearColor(1.f, 0.f, 0.f));
- 	vertexColors.Add(FLinearColor(1.f, 0.f, 0.f));
- 	vertexColors.Add(FLinearColor(0.f, 1.f, 0.f));
- 	vertexColors.Add(FLinearColor(0.5f, 1.f, 0.5f));
- 	vertexColors.Add(FLinearColor(0.f, 1.f, 0.f));
- 	vertexColors.Add(FLinearColor(1.f, 1.f, 0.f));
- 	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
- 	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
- 	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
- 	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
- 	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
+// 	
+// 	uvs.Add(FVector2D(0, 0));
+// 	uvs.Add(FVector2D(10, 0));
+// 	uvs.Add(FVector2D(0, 10));
+// 	uvs.Add(FVector2D(0, 0));
+// 	uvs.Add(FVector2D(10, 0));
+// 	uvs.Add(FVector2D(0, 10));
+// 	uvs.Add(FVector2D(0, 0));
+// 	uvs.Add(FVector2D(10, 0));
+// 	uvs.Add(FVector2D(0, 10));
+// 	uvs.Add(FVector2D(0, 0));
+// 	uvs.Add(FVector2D(10, 0));
+// 	uvs.Add(FVector2D(0, 10));
+//  
+//  	vertexColors.Add(FLinearColor::MakeRandomColor());
+//  	vertexColors.Add(FLinearColor(1.f, 0.f, 0.f));
+//  	vertexColors.Add(FLinearColor(1.f, 0.f, 0.f));
+//  	vertexColors.Add(FLinearColor(0.f, 1.f, 0.f));
+//  	vertexColors.Add(FLinearColor(0.5f, 1.f, 0.5f));
+//  	vertexColors.Add(FLinearColor(0.f, 1.f, 0.f));
+//  	vertexColors.Add(FLinearColor(1.f, 1.f, 0.f));
+//  	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
+//  	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
+//  	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
+//  	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
+//  	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
+	//CustomMesh->SetMaterial(0, material);
+	CustomMesh->CreateMeshSection_LinearColor(0, mesh.vertices, mesh.index, TArray<FVector>(), TArray<FVector2D>(), TArray<FLinearColor>(), TArray<FProcMeshTangent>(), true);
 
-	CustomMesh->CreateMeshSection_LinearColor(0, vertices, triangles, TArray<FVector>(), TArray<FVector2D>(), vertexColors, TArray<FProcMeshTangent>(), true);
-
-	CustomMesh->SetRelativeScale3D(FVector(500, 500, 500));
+	//CustomMesh->SetRelativeScale3D(FVector(500, 500, 500));
 
 }
 

@@ -1,3 +1,3 @@
-C:\Users\Versus\Desktop\Extensions\HSG\Source\HSG\HSG.Build.cs
-C:\Users\Versus\Desktop\Extensions\HSG\Source\HSG.Target.cs
-C:\Users\Versus\Desktop\Extensions\HSG\Source\HSGEditor.Target.cs
+C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Source\HSG\HSG.Build.cs
+C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Source\HSG.Target.cs
+C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Source\HSGEditor.Target.cs
