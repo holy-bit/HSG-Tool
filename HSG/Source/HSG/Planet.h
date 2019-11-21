@@ -93,6 +93,9 @@ namespace icosahedron
 	const float Z = 50;//.850650808352039932f;
 	const float X = (1 + sqrt(5)) / 2 * 50;//.525731112119133606f;
 	const float N = 0.f;
+	const float w = 5.5f;
+	//The number of points vertically
+	const float h = 3.f;
 
 	static TArray<FVector> vertices =
 	{
@@ -109,20 +112,22 @@ namespace icosahedron
 	  {4,9,5},{2,4,11},{6,2,10},{8,6,7},{9,8,1}
 	};
 
-// 	static TArray<FVector> vertices =
-// 	{
-// 	  {-X,N,Z}, {X,N,Z}, {-X,N,-Z}, {X,N,-Z},
-// 	  {N,Z,X}, {N,Z,-X}, {N,-Z,X}, {N,-Z,-X},
-// 	  {Z,X,N}, {-Z,X, N}, {Z,-X,N}, {-Z,-X, N}
-// 	};
-// 
-// 	static TArray<FVector> triangles =
-// 	{
-// 	  {0,4,1},{0,9,4},{9,5,4},{4,5,8},{4,8,1},
-// 	  {8,10,1},{8,3,10},{5,3,8},{5,2,3},{2,7,3},
-// 	  {7,10,3},{7,6,10},{7,11,6},{11,0,6},{0,1,6},
-// 	  {6,1,10},{9,0,11},{9,11,2},{9,2,5},{7,2,11}
-// 	};
+	static TArray<FVector2D> uvs =
+	{
+	  {0.5f/w, 0},{1.5f / w, 0},{2.5f / w, 0},{3.5f / w, 0},{4.5f / w, 0},
+	  {0, 1 / h},{1.f / w, 1 / h},{2.f / w, 1 / h},{3.f / w, 1 / h},{4.f / w, 1 / h}, {5.f / w, 1 / h},
+	  {0.5f / w, 2 / h},{1.5f / w, 2 / h},{2.5f / w, 2 / h},{3.5f / w, 2 / h},{4.5f / w, 2 / h},{1, 2 / h},
+	  {1.f / w, 1},{2.f / w, 1},{3.f / w, 1},{4.f / w, 1},{5.f / w, 1}
+	};
+
+	static TArray<FVector> uvsTriangles =
+	{
+	  {0,5,6},{1,6,7},{2,7,8},{3,8,9},{4,9,10},
+	  {7,6,12},{6,5,11},{10,9,15},{9,8,14},{8,7,13},
+	  {17,12,11},{21,16,15},{20,15,14},{19,14,13},{18,13,12},
+	  {11,12,6},{15,16,10},{14,15,9},{13,14,8},{12,13,7}
+	};
+
 }
 
 UCLASS()
@@ -168,6 +173,8 @@ protected:
 	FVector getMiddle(FVector& v1, FVector& v2);
 
 	void subdivideIcosahedron();
+
+	void CreateTriangle();
 
 // 	using Lookup = std::map<std::pair<Index, Index>, Index>;
 // 

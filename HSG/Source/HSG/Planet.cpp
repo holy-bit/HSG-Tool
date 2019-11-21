@@ -117,6 +117,29 @@ void APlanet::BeginPlay()
 	 mesh.index = newindex;
  }
 
+ void APlanet::CreateTriangle()
+ {
+	 vertices.Add(FVector(0.0f, 0.0f, 0.0f));
+	 vertices.Add(FVector(100.0f, 0.0f, 0.0f));
+	 vertices.Add(FVector(0.0f, 100.0f, 0.0f));
+
+	 triangles.Add(0);
+	 triangles.Add(2);
+	 triangles.Add(1);
+
+	 uvs.Add(FVector2D(0.0f, 0.0f));
+	 uvs.Add(FVector2D(1.0f, 0.0f));
+	 uvs.Add(FVector2D(0.0f, 1.0f));
+
+	 //uvs.Init(FVector2D(0.0f, 0.0f), 3);
+	 normals.Init(FVector(0.0f, 0.0f, 1.0f), 3);
+	 vertexColors.Init(FLinearColor(0.0f, 0.0f, 0.0f, 1.0f), 3);
+	 tangents.Init(FProcMeshTangent(1.0f, 0.0f, 0.0f), 3);
+
+	 //Function that creates mesh section
+	 CustomMesh->CreateMeshSection_LinearColor(0, vertices, triangles, normals, uvs, vertexColors, tangents, false);
+ }
+
 void APlanet::OnConstruction(const FTransform& Transform)
 {
 	ClearMeshData();
@@ -191,10 +214,10 @@ void APlanet::OnConstruction(const FTransform& Transform)
 	}
  
 
-	subdivideIcosahedron();
-	subdivideIcosahedron();
-	subdivideIcosahedron();
-	subdivideIcosahedron();
+	//subdivideIcosahedron();
+	//subdivideIcosahedron();
+	//subdivideIcosahedron();
+	//subdivideIcosahedron();
  	/*AddTriangle(icosahedron::triangles[0].vertices.X, icosahedron::triangles[0].vertices.Y, icosahedron::triangles[0].vertices.Z);
 	AddTriangle(icosahedron::triangles[1].vertices.X, icosahedron::triangles[1].vertices.Y, icosahedron::triangles[1].vertices.Z);
 	AddTriangle(icosahedron::triangles[2].vertices.X, icosahedron::triangles[2].vertices.Y, icosahedron::triangles[2].vertices.Z);
@@ -244,11 +267,13 @@ void APlanet::OnConstruction(const FTransform& Transform)
 //  	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
 //  	vertexColors.Add(FLinearColor(0.f, 1.f, 1.f));
 	//CustomMesh->SetMaterial(0, material);
-	CustomMesh->CreateMeshSection_LinearColor(0, mesh.vertices, mesh.index, TArray<FVector>(), TArray<FVector2D>(), TArray<FLinearColor>(), TArray<FProcMeshTangent>(), true);
-
+	//CustomMesh->CreateMeshSection_LinearColor(0, mesh.vertices, mesh.index, TArray<FVector>(), TArray<FVector2D>(), TArray<FLinearColor>(), TArray<FProcMeshTangent>(), true);
+	CreateTriangle();
 	//CustomMesh->SetRelativeScale3D(FVector(500, 500, 500));
 
 }
+
+
 
 
 // void APlanet::subdivide(VertexList& vertices,
