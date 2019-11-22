@@ -1,7 +1,7 @@
-C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\Definitions.HSG.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Source\HSG/Planet.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Plugins\Runtime\ProceduralMeshComponent\Source\ProceduralMeshComponent\Public\ProceduralMeshComponent.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Plugins\Runtime\ProceduralMeshComponent\Intermediate\Build\Win64\UE4Editor\Inc\ProceduralMeshComponent\ProceduralMeshComponent.generated.h
-C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Inc\HSG\Planet.generated.h
+C:\Users\Versus\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\Definitions.HSG.h
+C:\Program Files (x86)\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files (x86)\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Versus\Desktop\Extensions\HSG-Tool\HSG\Source\HSG/Planet.h
+C:\Program Files (x86)\UE_4.23\Engine\Plugins\Runtime\ProceduralMeshComponent\Source\ProceduralMeshComponent\Public\ProceduralMeshComponent.h
+C:\Program Files (x86)\UE_4.23\Engine\Plugins\Runtime\ProceduralMeshComponent\Intermediate\Build\Win64\UE4Editor\Inc\ProceduralMeshComponent\ProceduralMeshComponent.generated.h
+c:\users\versus\desktop\extensions\hsg-tool\hsg\intermediate\build\win64\ue4editor\inc\hsg\Planet.generated.h

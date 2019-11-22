@@ -48,7 +48,59 @@ void APlanet::BeginPlay()
 	 return temporaryVector;
  }
 
+ FVector2D APlanet::getMiddle(FVector2D& v1, FVector2D& v2)
+ {
+
+	 FVector2D temporaryVector;
+
+	 //Calculate the middle
+	 temporaryVector = (v2 - v1) * 0.5 + v1;
+
+	 return temporaryVector;
+ }
+
+
  void APlanet::subdivideIcosahedron()
+ {
+	 subdivideTriangles();
+ }
+
+ void APlanet::subdivideUVs()
+ {
+	 //TArray<FVector2D> newUV;
+
+	 //FVector2D newVector1;
+	 //FVector2D newVector2;
+	 //FVector2D newVector3;
+	 //for (int i = 0; i &lt; vertices.Count; i += 3)
+	 //{
+		// //Find the middle points
+		// newVector1 = getMiddle(UV[i], UV[i + 1]);
+		// newVector2 = getMiddle(UV[i + 1], UV[i + 2]);
+		// newVector3 = getMiddle(UV[i + 2], UV[i]);
+
+		// //Add the new faces
+		// newUV.Add(newVector3);
+		// newUV.Add(UV[i]);
+		// newUV.Add(newVector1);
+
+		// newUV.Add(newVector1);
+		// newUV.Add(UV[i + 1]);
+		// newUV.Add(newVector2);
+
+		// newUV.Add(newVector2);
+		// newUV.Add(UV[i + 2]);
+		// newUV.Add(newVector3);
+
+		// newUV.Add(newVector1);
+		// newUV.Add(newVector2);
+		// newUV.Add(newVector3);
+	 //}
+	 ////Replace old points with new
+	 //UV = newUV;
+ }
+
+ void APlanet::subdivideTriangles()
  {
 	 float t = (1 + sqrt(5)) / 2;
 	 TArray<FVector> newVertices;
@@ -59,59 +111,59 @@ void APlanet::BeginPlay()
 	 FVector newVector3;
 	 int32 x = 0;
 	 UE_LOG(LogMyGame, Warning, TEXT("MyCharacter's Health is %d"), mesh.index.Num());
- 	 for (int i = 0; i < mesh.index.Num()-2; i += 3)
- 	 {
- 		 //Find the middle points
- 		 newVector1 = getMiddle(mesh.vertices[mesh.index[i]], mesh.vertices[mesh.index[i+1]]);
- 		 newVector2 = getMiddle(mesh.vertices[mesh.index[i+1]], mesh.vertices[mesh.index[i+2]]);
- 		 newVector3 = getMiddle(mesh.vertices[mesh.index[i+2]], mesh.vertices[mesh.index[i]]);
- 
- 		 //Add the new faces
- 		 newVertices.Add(newVector3);
- 		 newVertices.Add(mesh.vertices[mesh.index[i]]);
- 		 newVertices.Add(newVector1);
- 
- 		 /////
- 		 newindex.Add(x);
- 		 x++;
- 		 newindex.Add(x);
- 		 x++;
- 		 newindex.Add(x);
- 		 x++;
- 
- 		 newVertices.Add(newVector1);
- 		 newVertices.Add(mesh.vertices[mesh.index[i+1]]);
- 		 newVertices.Add(newVector2);
- 
- 		 newindex.Add(x);
- 		 x++;
- 		 newindex.Add(x);
- 		 x++;
- 		 newindex.Add(x);
- 		 x++;
- 
- 		 newVertices.Add(newVector2);
- 		 newVertices.Add(mesh.vertices[mesh.index[i+2]]);
- 		 newVertices.Add(newVector3);
- 
- 		 newindex.Add(x);
- 		 x++;
- 		 newindex.Add(x);
- 		 x++;
- 		 newindex.Add(x);
- 		 x++;
- 
- 		 newVertices.Add(newVector1);
- 		 newVertices.Add(newVector2);
- 		 newVertices.Add(newVector3);
- 
- 		 newindex.Add(x);
- 		 x++;
- 		 newindex.Add(x);
- 		 x++;
- 		 newindex.Add(x);
- 		 x++;
- 	 }
+	 for (int i = 0; i < mesh.index.Num() - 2; i += 3)
+	 {
+		 //Find the middle points
+		 newVector1 = getMiddle(mesh.vertices[mesh.index[i]], mesh.vertices[mesh.index[i + 1]]);
+		 newVector2 = getMiddle(mesh.vertices[mesh.index[i + 1]], mesh.vertices[mesh.index[i + 2]]);
+		 newVector3 = getMiddle(mesh.vertices[mesh.index[i + 2]], mesh.vertices[mesh.index[i]]);
+
+		 //Add the new faces
+		 newVertices.Add(newVector3);
+		 newVertices.Add(mesh.vertices[mesh.index[i]]);
+		 newVertices.Add(newVector1);
+
+		 /////
+		 newindex.Add(x);
+		 x++;
+		 newindex.Add(x);
+		 x++;
+		 newindex.Add(x);
+		 x++;
+
+		 newVertices.Add(newVector1);
+		 newVertices.Add(mesh.vertices[mesh.index[i + 1]]);
+		 newVertices.Add(newVector2);
+
+		 newindex.Add(x);
+		 x++;
+		 newindex.Add(x);
+		 x++;
+		 newindex.Add(x);
+		 x++;
+
+		 newVertices.Add(newVector2);
+		 newVertices.Add(mesh.vertices[mesh.index[i + 2]]);
+		 newVertices.Add(newVector3);
+
+		 newindex.Add(x);
+		 x++;
+		 newindex.Add(x);
+		 x++;
+		 newindex.Add(x);
+		 x++;
+
+		 newVertices.Add(newVector1);
+		 newVertices.Add(newVector2);
+		 newVertices.Add(newVector3);
+
+		 newindex.Add(x);
+		 x++;
+		 newindex.Add(x);
+		 x++;
+		 newindex.Add(x);
+		 x++;
+	 }
 	 //Replace old points with new
 	 mesh.vertices = newVertices;
 	 mesh.index = newindex;

@@ -172,7 +172,13 @@ protected:
 
 	FVector getMiddle(FVector& v1, FVector& v2);
 
+	FVector2D getMiddle(FVector2D& v1, FVector2D& v2);
+
 	void subdivideIcosahedron();
+
+	void subdivideTriangles();
+
+	void subdivideUVs();
 
 	void CreateTriangle();
 

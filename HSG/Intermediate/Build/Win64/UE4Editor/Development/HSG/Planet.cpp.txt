@@ -1,5 +1,5 @@
-C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\Definitions.HSG.h
-C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Source\HSG\Planet.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Plugins\Runtime\ProceduralMeshComponent\Source\ProceduralMeshComponent\Public\ProceduralMeshComponent.h
-C:\Program Files\Epic Games\UE_4.23\Engine\Plugins\Runtime\ProceduralMeshComponent\Intermediate\Build\Win64\UE4Editor\Inc\ProceduralMeshComponent\ProceduralMeshComponent.generated.h
-C:\Users\luisc\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Inc\HSG\Planet.generated.h
+C:\Users\Versus\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Development\HSG\Definitions.HSG.h
+c:\users\versus\desktop\extensions\hsg-tool\hsg\source\hsg\Planet.h
+C:\Program Files (x86)\UE_4.23\Engine\Plugins\Runtime\ProceduralMeshComponent\Source\ProceduralMeshComponent\Public\ProceduralMeshComponent.h
+C:\Program Files (x86)\UE_4.23\Engine\Plugins\Runtime\ProceduralMeshComponent\Intermediate\Build\Win64\UE4Editor\Inc\ProceduralMeshComponent\ProceduralMeshComponent.generated.h
+C:\Users\Versus\Desktop\Extensions\HSG-Tool\HSG\Intermediate\Build\Win64\UE4Editor\Inc\HSG\Planet.generated.h
